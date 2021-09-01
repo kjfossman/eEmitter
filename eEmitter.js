@@ -23,6 +23,13 @@ class eEmitter{
         this.events[name] = this.events[name].filter(l => l !== listenerToRemove)
     }
 
+    removeAllNameListeners(name) {
+        if (!this.events[name]) {
+            throw new Error(`Cannot remove listeners from ${name} because event ${name} does not exist`)
+        }
+        this.events[name] = []
+    }
+
     emit(name, ...data) {
         // check if name is an event 
         if (!this.events[name]) {

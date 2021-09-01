@@ -14,6 +14,15 @@ class eEmitter{
         this.events[name].push(listener);
     }
 
+    removeListener(name, listenerToRemove) {
+        // check if name is an event
+        if (!this.events[name]) {
+            throw new Error(`Cannot remove listener from ${name} because event ${name} does not exist`)
+        }
+        // set events to equal events array without the listenerToRemove
+        this.events[name] = this.events[name].filter(l => l !== listenerToRemove)
+    }
+
     emit(name, ...data) {
         // check if name is an event 
         if (!this.events[name]) {
@@ -29,5 +38,4 @@ class eEmitter{
 }
 
 const eventEmitter = new eEmitter()
-
 

@@ -63,25 +63,5 @@ class eEmitter{
 
 const eventEmitter = new eEmitter()
 
-const greetEveryone = (...args) => {
-    args.forEach(e => console.log(`hello ${e}`))
-}
 
-const sayBye = (...args) => {
-    args.forEach(e => console.log(`Bye ${e}`))
-}
-
-const checkIn = (...args) => {
-    args.forEach(e => console.log(`${e} Just wanted to check in once`))
-}
-
-eventEmitter.once('greet', (checkIn))
-
-eventEmitter.on('greet', greetEveryone)
-
-eventEmitter.on('greet', sayBye)
-
-// console.log(eventEmitter.events)
-eventEmitter.emit('greet', 'kyle', 'kate')
-eventEmitter.emit('greet', 'kyle')
-
+module.exports = eventEmitter

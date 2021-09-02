@@ -1,0 +1,23 @@
+{
+  "name": "eemitter",
+  "version": "1.0.0",
+  "description": "This is an application that builds an Event Emitter with no subclasses or existing modules",
+  "main": "eEmitter.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjfossman/eEmitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kjfossman/eEmitter/issues"
+  },
+  "homepage": "https://github.com/kjfossman/eEmitter#readme",
+  "devDependencies": {
+    "jest": "^27.1.0"
+  }
+}

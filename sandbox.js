@@ -7,3 +7,4 @@ const greetEveryone = (...args) => {
 eventEmitter.on('greet', greetEveryone)
 
 eventEmitter.emit('greet', 'Kyle')
+
